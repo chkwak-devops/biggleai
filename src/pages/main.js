@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 
-import { List, Icon, Divider, Accordion, Menu, Form } from "semantic-ui-react";
+import { Label, List, Icon, Divider, Accordion, Menu, Input, Form, TextArea, Select, Button } from "semantic-ui-react";
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
@@ -52,11 +52,65 @@ export default function Main() {
             height: "500px",
             padding: 10,
             margin: 10,
-            textAlign: "center",
+            // textAlign: "center",
             verticalAlign: "middle",
             border: "1px dashed grey",
           }}>
-            입력 조건 작성 영역
+            <Form>
+              {/*               
+              <Form.Group widths='equal'>
+                <Form.Field
+                  id='form-input-control-first-name'
+                  control={Input}
+                  label='First name'
+                  placeholder='First name'
+                />
+                <Form.Field
+                  id='form-input-control-last-name'
+                  control={Input}
+                  label='Last name'
+                  placeholder='Last name'
+                />
+              </Form.Group> */}
+              <div>스크립트를 입력하세요</div>
+              <Form.Field
+                id='form-textarea-control-opinion'
+                control={TextArea}
+                placeholder='기본 입력 문구'
+                style={{ minHeight: 200 }}
+              />
+              <div>Sentiments</div>
+              <Form.Field >
+                <Label as='a' color="red">
+                  <Icon name='heart' />
+                  Happy
+                </Label>
+                <Label as='a' color="red">
+                  <Icon name='heart' />
+                  Sad
+                </Label>
+
+
+              </Form.Field>
+
+
+              <Form.Field
+                id='form-input-control-error-email'
+                control={Input}
+                label='Email'
+                placeholder='joe@schmoe.com'
+                error={{
+                  content: 'Please enter a valid email address',
+                  pointing: 'below',
+                }}
+              />
+              <Form.Field
+                id='form-button-control-public'
+                control={Button}
+                content='Confirm'
+                label='Label with htmlFor'
+              />
+            </Form>
 
           </div>
 
@@ -74,6 +128,7 @@ export default function Main() {
 
         </div>
       </div>
+
 
 
     </>

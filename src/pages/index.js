@@ -36,12 +36,14 @@ export default function Index() {
 
                     <Button
                         size="massive"
-
-                        color='red'
-                        content='시작하기'
+                        color='blue'
+                        content='시작하기!'
                         labelPosition='right'
                         icon='arrow right'
-                    />
+                    >
+                        <Icon name='twitter' /> 로그인
+                    </Button>
+
                 </Link>
 
             </div>
