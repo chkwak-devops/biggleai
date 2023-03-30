@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
-import { List, Icon, Divider, Button } from "semantic-ui-react";
+import { List, Icon, Divider, Button, Menu } from "semantic-ui-react";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -38,10 +38,11 @@ export default function Index() {
                         size="massive"
                         color='blue'
                         content='시작하기!'
-                        labelPosition='right'
-                        icon='arrow right'
+                        labelPosition='left'
+                        icon
+                        onClick={() => alert("트위터 계정 인증후 입장합니다.")}
                     >
-                        <Icon name='twitter' /> 로그인
+                        <Icon name='twitter' /> Enterance
                     </Button>
 
                 </Link>
